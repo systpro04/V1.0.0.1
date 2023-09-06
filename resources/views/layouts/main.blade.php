@@ -52,7 +52,6 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="{{ asset('assets/js/material-dashboard.min.js?v=3.1.0') }}"></script>
 
-
 </body>
 <style>
     .body {

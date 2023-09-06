@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        if(auth()->check() && auth()->user()->is_admin == 1){
+
+        $users = User::all();
+
+            return view('admin.dashboard', compact('users'));
+        }else{
+            
+            return view('user.dashboard');
+        }
     }
 }
+

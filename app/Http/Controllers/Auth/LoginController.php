@@ -39,6 +39,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     public function username()
     {
         return 'username';
@@ -47,6 +48,6 @@ class LoginController extends Controller
     {
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],
-        ])->redirectTo('#loginModal');
+        ])->redirectTo('');
     }
 }
